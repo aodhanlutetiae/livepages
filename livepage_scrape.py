@@ -14,12 +14,12 @@ visits = 0
 # set to run every minute for 5 hours
 while visits < 300:
     req = requests.get(livepage_address, headers = my_headers)
-    soup = bs(req.content)
+    soup = bs(req.content, "html.parser")
     for x in soup.find('span', class_ = "ssrcss-798imn-CounterStringContainer e1naroyk0"):
         d = x.text
-        time = str(dt.now())
-        with open("/datafiles/bbc_live_data.csv", "a", newline="") as f:
+        timenow = str(dt.now())
+        with open("datafiles/bbc_live_data.csv", "a", newline="") as f:
             writer = csv.writer(f)
-            writer.writerow([d, time])
+            writer.writerow([d, timenow])
     visits = visits+1
     sleep(60)
