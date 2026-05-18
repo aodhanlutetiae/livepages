@@ -13,7 +13,7 @@ jobs:
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-python@v4
-            # run and assign to a file called datafiles
+            - run: pip install requests beautifulsoup4
             - run: python livepage_scrape.py > datafiles/bbc_live_data.csv
             # add the data to our repository
             - run: |-
