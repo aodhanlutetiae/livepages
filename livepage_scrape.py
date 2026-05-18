@@ -19,7 +19,7 @@ while visits < 300:
         d = x.text
         time = str(dt.now())
         with open("bbc_live_data.csv", "a", newline="") as f:
-        writer = csv.writer(f)
-        writer.writerow([d, time])
+            writer = csv.writer(f)
+            writer.writerow([d, time])
     visits = visits+1
     sleep(60)
