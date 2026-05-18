@@ -12,7 +12,7 @@ my_headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:84
 visits = 0
 
 # set to run every minute for 12 hours
-while visits < 720:
+while visits < 300:
     req = requests.get(livepage_address, headers = my_headers)
     soup = bs(req.content)
     for x in soup.find('span', class_ = "ssrcss-798imn-CounterStringContainer e1naroyk0"):
