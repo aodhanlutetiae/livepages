@@ -2,7 +2,7 @@ name: BBC Live Scraper
 
 on:
   schedule:
-    - cron: "* * * * *"  # every minute
+    - cron: "*/5 * * * *"  # every minute
   workflow_dispatch:
 
 permissions:
