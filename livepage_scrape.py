@@ -14,7 +14,7 @@ soup = bs(req.content, "html.parser")
 for x in soup.find('span', class_ = "ssrcss-798imn-CounterStringContainer e1naroyk0"):
     d = x.text
     # timenow = str(dt.now())
-    timenow = datetime.now(ZoneInfo("Europe/London")).isoformat() # for local UK time
+    timenow = dt.now(ZoneInfo("Europe/London")).isoformat() # for local UK time
     with open("datafiles/bbc_live_data.csv", "a", newline="") as f:
         writer = csv.writer(f)
         writer.writerow([d, timenow])
