@@ -5,7 +5,7 @@ from datetime import datetime as dt
 import csv
 
 # key info
-livepage_address = "https://www.bbc.co.uk/news/live/c99l70zy1j7t"
+livepage_address = "https://www.bbc.co.uk/news/live/cz6e0vplgldt"
 my_headers = {"User-Agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.14; rv:84.0) Gecko/20100101 Firefox/84.0"}
 
 req = requests.get(livepage_address, headers = my_headers)
